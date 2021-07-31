@@ -20,9 +20,6 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 module.exports = {
   solidity: "0.8.4",
   networks: {
-    hardhat: {
-     
-    },
     mainnet: {
       url: "https://mainnet.infura.io/v3/844b980e86ba47ac91db01c03984a86b",
       accounts: [process.env.PK],
@@ -30,11 +27,7 @@ module.exports = {
     rinkeby: {
       url: "https://rinkeby.infura.io/v3/844b980e86ba47ac91db01c03984a86b",
       accounts: [process.env.PK],
-    }
-    // mainnet: {
-    //   url: process.env.MAINNET_URL,
-    //   accounts: [process.env.PRIVATE_KEY_MAIN],
-    // },
+    },
   },
   etherscan: {
     // Your API key for Etherscan
