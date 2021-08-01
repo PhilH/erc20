@@ -15,9 +15,11 @@ async function main() {
 
   // We get the contract to deploy
   const Erc20 = await hre.ethers.getContractFactory("XEO4");
-  const erc20 = await Erc20.deploy("0x44B622999365f3aaC4268a5E5516F949F2b1aEE8");
+  const erc20 = await Erc20.deploy(
+    "0x44B622999365f3aaC4268a5E5516F949F2b1aEE8"
+  );
 
-  await greeter.deployed();
+  await erc20.deployed();
 
   console.log("XEO4 deployed to:", erc20.address);
 }
